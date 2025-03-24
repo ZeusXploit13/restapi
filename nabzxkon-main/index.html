@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs - RestApi API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-url: url('https://l.top4top.io/p_3370bwwsv0.jpeg');
+        }
+
+        body {
+            background: var(--background-url) no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.7rem;
+            margin: 20px 0 10px;
+        }
+
+        .header h1 span {
+            color: #1e90ff;
+        }
+
+        .section {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .api-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 8px 0;
+            transition: 0.3s;
+        }
+
+        .cool-button {
+          background: linear-gradient(45deg, #007bff, #00d4ff);
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 30px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          outline: none;
+        }
+
+        /* Efek Hover */
+        .cool-button:hover {
+          background: linear-gradient(45deg, #0056b3, #00a6ff);
+          box-shadow: 0 0 10px rgba(0, 150, 255, 0.6);
+        }
+
+        /* Hilangkan efek membesar saat diklik */
+        .cool-button:active {
+          background: linear-gradient(45deg, #004494, #008fd1);
+          box-shadow: none;
+        }
+        
+        .api-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .api-item .method {
+            color: #1e90ff;
+            font-weight: bold;
+        }
+
+        /* Tombol TRY yang lebih keren */
+        .api-item .try-btn {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .api-item .try-btn:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 75, 43, 0.6);
+        }
+
+        .api-item .try-btn a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="header">
+            <h1>RestApi <span>API</span></h1>
+            <p>Powered by ZeusXploit &lt;\&gt;</p>
+        </div>
+        <p>
+        <button class="cool-button" onclick="changeBackground()">Ganti Background</button>
+</p>
+
+        <div class="links">
+        <a href="https://whatsapp.com/channel/0029VabHsw01NCrVkoHw551y"><i class="fas fa-comments"></i> Channel WhatsApp</a>
+            
+            <a href="https://wa.me/6281274742773"><i class="fas fa-paperclip"></i> Development</a>
+            <p>
+            <a href="https://wa.me/6282260875548"><i class="fas fa-user"></i> Contact Developer V2</a>
+<p>
+  <div>
+    <div>
+        </div>
+        <p></p>
+        <div class="section">
+            <h2>Orderkuota Gateway</h2>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Create Payment</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/orkut/createpayment?apikey=&amount=&codeqr=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Cek Status Payment</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/orkut/cekstatus?apikey=&merchant=&keyorkut=">TRY</a></button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>AI Features</h2>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>ChatGPT</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/ai/chat?message=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>AI Create Image</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/ai/image?prompt=">TRY</a></button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Downloader</h2>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>TikTok</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/downloader/tiktokdl?url=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Instagram</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/downloader/igdl?url=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Facebook</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/downloader/fbdl?url=">TRY</a></button>
+            </div>
+                        <div class="api-item">
+                <span class="method">GET</span>
+                <span>YTMP3</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/downloader/igdl?url=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>YTMP4</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/downloader/fbdl?url=">TRY</a></button>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tools OpenAI</h2>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>OpenAi</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/tools/openai?prompt=sekarang kamu adalah ZeusXploit-AI&msg=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>GPT</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/tools/gptchat1?text=">TRY</a></button>
+            </div>
+                        <div class="api-item">
+                <span class="method">GET</span>
+                <span>Gemini</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/tools/openai?prompt=sekarang kamu adalah ZeusXploit-AI&msg=">TRY</a></button>
+            </div>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Remini</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/tools/gptchat1?text=">TRY</a></button>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Canvas Creator</h2>
+            <div class="api-item">
+                <span class="method">GET</span>
+                <span>Brat</span>
+                <button class="try-btn"><a href="https://restapi.zeusexploitersx.site/api/canvas/brat?text=">TRY</a></button>
+        </div>
+        </div>
+        <div class="footer">
+            &copy; 2025 ZeusXploit. All rights reserved.
+                <script>
+        let backgroundToggle = false;
+
+        function changeBackground() {
+            if (backgroundToggle) {
+                document.documentElement.style.setProperty('--background-url', "url('https://l.top4top.io/p_3370bwwsv0.jpeg')");
+            } else {
+                document.documentElement.style.setProperty('--background-url', "url('https://d.top4top.io/p_3370ngdo20.jpeg')");
+            }
+            backgroundToggle = !backgroundToggle;
+        }
+    </script>
+        </div>
+    </div>
+</body>
+</html>
