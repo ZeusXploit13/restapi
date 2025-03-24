@@ -85,13 +85,13 @@ app.get('/api/orkut/cekstatus', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-})
+});
 // Endpoint untuk servis dokumen HTML
 app.get('/', (req, res) => {
   var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
   console.log("Client : " + ip)
   res.sendFile(path.join(__dirname, 'index.html'));
-})
+});
 app.get("/api/ai/chat", async (req, res) => {
     const { prompt } = req.query;
     if (!prompt) return res.json("Isi Parameternya!");
@@ -119,7 +119,7 @@ app.get("/api/tools/openai", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 app.get("/api/tools/gptchat1", async (req, res) => {
     const { text } = req.query;
@@ -144,7 +144,7 @@ app.get("/api/tools/gptchat1", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 
 app.get("/api/tools/gemini", async (req, res) => {
@@ -179,7 +179,7 @@ const anu = await result.response.text()
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 
 app.get("/api/downloader/fbdl", async (req, res) => {
@@ -197,7 +197,7 @@ app.get("/api/downloader/fbdl", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 app.get("/api/downloader/igdl", async (req, res) => {
     const { url } = req.query;
@@ -210,7 +210,7 @@ app.get("/api/downloader/igdl", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 app.get("/api/downloader/tiktokdl", async (req, res) => {
     const { url } = req.query;
@@ -228,7 +228,7 @@ app.get("/api/downloader/tiktokdl", async (req, res) => {
         console.error(error);
         res.status(500).json({ error: "An error occurred while fetching data." });
     }
-})
+});
 
 app.get("/api/downloader/ytmp3", async (req, res) => {
     const { url } = req.query;
@@ -281,7 +281,7 @@ app.get("/api/tools/remini", async (req, res) => {
         console.error(error);
         res.send(error)
     }
-})
+});
 
 
 app.post("/api/tools/upload", async (req, res) => {
@@ -295,7 +295,7 @@ app.post("/api/tools/upload", async (req, res) => {
         console.error(error);
         res.send(error)
     }
-})
+});
 
 
 // Error Handling Middleware
@@ -311,6 +311,6 @@ app.use((err, req, res, next) => {
 // Jalankan server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
-})
+});
   
  module.exports = app
