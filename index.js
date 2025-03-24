@@ -92,10 +92,22 @@ app.get('/', (req, res) => {
   console.log("Client : " + ip)
   res.sendFile(path.join(__dirname, 'index.html'));
 });
-app.get("/api/ai/chat", async (req, res) => {
-    const { prompt } = req.query;
-    if (!prompt) return res.json("Isi Parameternya!");
-    
+  app.get("/api/ai/chat", async (req, res) => {
+  const { prompt } = req.query;
+  if (!prompt) return res.json({ error: "Isi Parameternya!" });
+
+  try {
+    var response = await chatbot.send(`${prompt}`, "gpt-3.5-turbo");
+    res.json({
+      status: true,
+      creator: global.creator || "Default Creator",
+      result: response.choices[0].message.content,
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Terjadi kesalahan pada server." });
+  }
+}); // ✅ FIXED - Sekarang endpoint ini ditutup dengan benar
 app.get("/api/tools/openai", async (req, res) => {
     const { prompt, msg } = req.query;
     if (!prompt || !msg) return res.json("Isi Parameternya!");
