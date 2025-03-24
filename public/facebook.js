@@ -1,4 +1,4 @@
-const getFbVideoInfo = require("fb-downloader-scrapper")
+import getFbVideoInfo from "fb-downloader-scrapper";
 require("../settings.js")
 
 async function fbdl(fbUrl) {
